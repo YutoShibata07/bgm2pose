@@ -1,4 +1,4 @@
-# BGM2Pose: Active 3D Human Pose Estimation with Non-Stationary Sounds
+# [IEEE OJSP 2026] BGM2Pose: Active 3D Human Pose Estimation with Non-Stationary Sounds
 
 [Yuto Shibata](https://yutoshibata07.github.io/YutoShibata/)<sup>1</sup>,
 [Yusuke Oumi](https://oumi03.github.io/)<sup>1</sup>,
