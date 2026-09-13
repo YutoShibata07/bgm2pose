@@ -30,10 +30,16 @@ model predicts the pose from the recording and the playback track. No chirp sign
 
 ## Code
 
-We plan to release the training and evaluation code in this repository. Stay tuned.
+The training and evaluation code will be released in this repository by the end of September 2026.
 
 The AMPL dataset (4+ hours of synchronized music, recorded audio and motion capture from 9 subjects)
 is already available on [IEEE DataPort](https://ieee-dataport.org/documents/acoustic-music-based-pose-learning-ampl).
+
+## TODO
+
+- [x] Release the AMPL dataset
+- [x] Launch the [project page](https://yutoshibata07.github.io/bgm2pose-project-page/)
+- [ ] Release training and evaluation code (September 2026)
 
 ## Citation
 
