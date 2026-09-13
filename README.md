@@ -43,14 +43,19 @@ It was recorded in a classroom with background noise and reverberation, using fo
 ### Download
 
 Download `ampl.zip` from IEEE DataPort and unzip it into the `pose_estimation/` directory of this repository.
+The archive contains a single folder, `dataset_spec_2400/`, so the data ends up in `pose_estimation/dataset_spec_2400/`.
 
 ```bash
 unzip ampl.zip -d pose_estimation/
 ```
 
+The paths in `music_intensity.csv` are relative to `pose_estimation/` (e.g. `./dataset_spec_2400/music_with_intensity/...`),
+so keep this layout when running the code.
+
 ### Contents
 
-The release contains preprocessed acoustic features and 3D poses. Raw microphone recordings and the
+The dataset consists of 25,354 samples. Each sample covers a 0.6 s window and pairs preprocessed acoustic
+features with the ground-truth 3D poses captured by motion capture. Raw microphone recordings and the
 original music tracks are not included.
 
 ```
@@ -61,13 +66,14 @@ pose_estimation/dataset_spec_2400/
     └── joint_pos_subject_<s>_<track>_<idx>_0.6.npy         # 3D poses
 ```
 
-| File | Content |
-|---|---|
-| `music_with_intensity/*_music_intensity.npy` | Preprocessed features for a 0.6 s window: log-mel spectrograms combined with intensity vectors. `float32`, shape `(15, 128, 12)` = channels × mel bins × frames (20 FPS). |
-| `music_with_intensity/joint_pos_*.npy` | Ground-truth 3D poses from motion capture for the same window. `float32`, shape `(12, 63)` = 12 frames × (21 joints × 3). The spine–hip distance is normalized to 1. |
-| `music_intensity.csv` | Index of all 25,354 samples. Columns: `sound_path` (feature file), `joint_path` (pose file), `testee` (subject), `music_type` (track), `label`, `spec_duration`. |
+- **Acoustic features** (`*_music_intensity.npy`): log-mel spectrograms combined with intensity vectors,
+  stored as `float32` arrays of shape `(15, 128, 12)` (channels × mel bins × frames at 20 FPS).
+- **3D poses** (`joint_pos_*.npy`): `float32` arrays of shape `(12, 63)`, i.e. 12 frames of 21 joints in 3D.
+  Poses are normalized so that the spine–hip distance is 1.
+- **Index** (`music_intensity.csv`): one row per sample, linking the feature file (`sound_path`) to its pose file
+  (`joint_path`), together with the subject (`testee`) and the music track (`music_type`).
 
-Track names in the files are `arnor`, `cirrus`, `mantron` (MANTRA) and `jazz` (Kurina blues).
+The tracks appear in file names as `arnor`, `cirrus`, `mantron` (MANTRA) and `jazz` (Kurina blues).
 
 ### Subject IDs
 
