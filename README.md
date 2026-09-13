@@ -14,7 +14,7 @@
 [Project Page](https://yutoshibata07.github.io/bgm2pose-project-page/) |
 [Paper](https://ieeexplore.ieee.org/document/11570037/) |
 [arXiv](https://arxiv.org/abs/2503.00389) |
-[AMPL Dataset](https://ieee-dataport.org/documents/acoustic-music-based-pose-learning-ampl)
+[AMPL Dataset](https://drive.google.com/file/d/1u3uDFPnc6aOf0leslzXGF7wufUKXVYej/view?usp=sharing)
 
 ![BGM2Pose overview](https://raw.githubusercontent.com/YutoShibata07/bgm2pose-project-page/main/static/images/teaser.png)
 
@@ -35,14 +35,13 @@ The training and evaluation code will be released in this repository by the end 
 ## Dataset
 
 The AMPL (Acoustic Music-based Pose Learning) dataset is available on
-[IEEE DataPort](https://ieee-dataport.org/documents/acoustic-music-based-pose-learning-ampl)
-(DOI: [10.21227/ryz7-b544](https://doi.org/10.21227/ryz7-b544); login required).
+[Google Drive](https://drive.google.com/file/d/1u3uDFPnc6aOf0leslzXGF7wufUKXVYej/view?usp=sharing) (`ampl.zip`, 2.2 GB).
 It was recorded in a classroom with background noise and reverberation, using four BGM tracks
 (ARNOR, Cirrus, MANTRA: ambient; Kurina blues: jazz) and a 16-camera motion capture system.
 
 ### Download
 
-Download `ampl.zip` from IEEE DataPort and unzip it into the `pose_estimation/` directory of this repository.
+Download `ampl.zip` from [Google Drive](https://drive.google.com/file/d/1u3uDFPnc6aOf0leslzXGF7wufUKXVYej/view?usp=sharing) and unzip it into the `pose_estimation/` directory of this repository.
 The archive contains a single folder, `dataset_spec_2400/`, so the data ends up in `pose_estimation/dataset_spec_2400/`.
 
 ```bash
